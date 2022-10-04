@@ -1,5 +1,5 @@
 <template>
-  <mail>
+  <main>
     <div class="preview">
       <div class="container">
         <div class="row">
@@ -59,22 +59,22 @@
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
             <div class="best__wrapper">
-              <card-component />
-              <card-component />
-              <card-component />
+              <best-component />
+              <best-component />
+              <best-component />
             </div>
           </div>
         </div>
       </div>
     </section>
-  </mail>
+  </main>
 </template>
 
 <script>
 import NavBarComponent from "@/components/NavBarComponent.vue";
-import CardComponent from "@/components/CardComponent.vue";
+import BestComponent from "@/components/BestComponent.vue";
 
 export default {
-  components: { NavBarComponent, CardComponent },
+  components: { NavBarComponent, BestComponent },
 };
 </script>

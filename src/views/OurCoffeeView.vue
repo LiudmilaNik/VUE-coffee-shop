@@ -69,12 +69,48 @@
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
             <div class="shop__wrapper">
-              <card-component />
-              <card-component />
-              <card-component />
-              <card-component />
-              <card-component />
-              <card-component />
+              <BestComponent
+                classItem="shop__item"
+                :name="coffee[0].name"
+                :country="coffee[0].country"
+                :price="coffee[0].price"
+                :image="coffee[0].image"
+              />
+              <BestComponent
+                classItem="shop__item"
+                :name="coffee[1].name"
+                :country="coffee[1].country"
+                :price="coffee[1].price"
+                :image="coffee[1].image"
+              />
+              <BestComponent
+                classItem="shop__item"
+                :name="coffee[2].name"
+                :country="coffee[2].country"
+                :price="coffee[2].price"
+                :image="coffee[2].image"
+              />
+              <BestComponent
+                classItem="shop__item"
+                :name="coffee[3].name"
+                :country="coffee[3].country"
+                :price="coffee[3].price"
+                :image="coffee[3].image"
+              />
+              <BestComponent
+                classItem="shop__item"
+                :name="coffee[4].name"
+                :country="coffee[4].country"
+                :price="coffee[4].price"
+                :image="coffee[4].image"
+              />
+              <BestComponent
+                classItem="shop__item"
+                :name="coffee[5].name"
+                :country="coffee[5].country"
+                :price="coffee[5].price"
+                :image="coffee[5].image"
+              />
             </div>
           </div>
         </div>
@@ -85,47 +121,59 @@
 
 <script>
 import NavBarComponent from "@/components/NavBarComponent.vue";
-import CardComponent from "@/components/CardComponent.vue";
+import BestComponent from "@/components/BestComponent.vue";
 
 export default {
-  components: { NavBarComponent, CardComponent },
+  components: { NavBarComponent, BestComponent },
   data() {
     return {
       coffee: [
         {
           id: 0,
-          image: "coffee-1.jpg",
+          image: "coffee-3.jpg",
+          country: "Brasil",
           name: "Solimo Coffee Beans 2kg",
+
           price: 10.73,
         },
         {
           id: 1,
-          image: "coffee-2.jpg",
+          image: "coffee-3.jpg",
+          country: "Brasil",
           name: "Presto Coffee Beans 1kg",
+
           price: 15.99,
         },
         {
           id: 2,
           image: "coffee-3.jpg",
+          country: "Brasil",
           name: "AROMISTICO Coffee 1kg",
+
           price: 6.99,
         },
         {
           id: 3,
-          image: "coffee-1.jpg",
+          image: "coffee-3.jpg",
+          country: "Brasil",
           name: "Solimo Coffee Beans 2kg",
+
           price: 10.73,
         },
         {
           id: 4,
-          image: "coffee-2.jpg",
+          image: "coffee-3.jpg",
+          country: "Brasil",
           name: "Presto Coffee Beans 1kg",
+
           price: 15.99,
         },
         {
           id: 5,
           image: "coffee-3.jpg",
+          country: "Brasil",
           name: "AROMISTICO Coffee 1kg",
+
           price: 6.99,
         },
       ],

@@ -48,46 +48,13 @@
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
             <div class="shop__wrapper">
-              <BestComponent
+              <best-component
+                v-for="card in goods"
+                :key="card.id"
                 classItem="shop__item"
-                :name="goods[0].name"
-                :country="goods[0].country"
-                :price="goods[0].price"
-                :image="goods[0].image"
-              />
-              <BestComponent
-                classItem="shop__item"
-                :name="goods[1].name"
-                :country="goods[1].country"
-                :price="goods[1].price"
-                :image="goods[1].image"
-              />
-              <BestComponent
-                classItem="shop__item"
-                :name="goods[2].name"
-                :country="goods[2].country"
-                :price="goods[2].price"
-                :image="goods[2].image"
-              />
-              <BestComponent
-                classItem="shop__item"
-                :name="goods[3].name"
-                :country="goods[3].country"
-                :price="goods[3].price"
-                :image="goods[3].image"
-              />
-              <BestComponent
-                classItem="shop__item"
-                :name="goods[4].name"
-                :country="goods[4].country"
-                :price="goods[4].price"
-                :image="goods[4].image"
-              />
-              <BestComponent
-                classItem="shop__item"
-                :name="goods[5].name"
-                :country="goods[5].country"
-                :image="goods[5].image"
+                :image="card.image"
+                :name="card.name"
+                :price="card.price"
               />
             </div>
           </div>

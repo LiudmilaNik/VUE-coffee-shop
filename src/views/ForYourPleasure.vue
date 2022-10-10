@@ -52,9 +52,8 @@
                 v-for="card in goods"
                 :key="card.id"
                 classItem="shop__item"
-                :image="card.image"
-                :name="card.name"
-                :price="card.price"
+                :card="card"
+                @onNavigate="navigate"
               />
             </div>
           </div>
@@ -68,55 +67,20 @@
 import NavBarComponent from "@/components/NavBarComponent.vue";
 import BestComponent from "@/components/BestComponent.vue";
 
+import { navigate } from "../mixins/navigate";
+
 export default {
   components: { NavBarComponent, BestComponent },
+  computed: {
+    goods() {
+      return this.$store.getters["getGoods"];
+    },
+  },
   data() {
     return {
-      goods: [
-        {
-          id: 0,
-          image: "good-1.jpg",
-          name: "Solimo Coffee Beans 2kg",
-          country: "Brasil",
-          price: 10.73,
-        },
-        {
-          id: 1,
-          image: "good-1.jpg",
-          name: "Presto Coffee Beans 1kg",
-          country: "Brasil",
-          price: 15.99,
-        },
-        {
-          id: 2,
-          image: "good-1.jpg",
-          name: "AROMISTICO Coffee 1kg",
-          country: "Brasil",
-          price: 6.99,
-        },
-        {
-          id: 3,
-          image: "good-1.jpg",
-          name: "Solimo Coffee Beans 2kg",
-          country: "Brasil",
-          price: 10.73,
-        },
-        {
-          id: 4,
-          image: "good-1.jpg",
-          name: "Presto Coffee Beans 1kg",
-          country: "Brasil",
-          price: 15.99,
-        },
-        {
-          id: 5,
-          image: "good-1.jpg",
-          name: "AROMISTICO Coffee 1kg",
-          country: "Brasil",
-          price: 6.99,
-        },
-      ],
+      name: "goods",
     };
   },
+  mixins: [navigate],
 };
 </script>

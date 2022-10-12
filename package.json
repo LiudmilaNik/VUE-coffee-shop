@@ -12,7 +12,7 @@
     "@vuelidate/validators": "^2.0.0",
     "core-js": "^3.8.3",
     "seamless-scroll-polyfill": "^2.2.0",
-    "vue": "^2.6.14",
+    "vue": "^2.6.11",
     "vue-router": "^3.6.5",
     "vuex": "^3.6.2"
   },
@@ -21,7 +21,7 @@
     "@vue/cli-service": "~5.0.0",
     "sass": "^1.49.0",
     "sass-loader": "^10.2.1",
-    "vue-template-compiler": "^2.6.14"
+    "vue-template-compiler": "^2.7.12"
   },
   "browserslist": [
     "> 1%",

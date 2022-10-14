@@ -6,7 +6,6 @@ const coffee = {
         image: "coffee-3.jpg",
         country: "Brasil",
         name: "Solimo Coffee Beans 2kg",
-
         price: 10.73,
       },
       {
@@ -14,7 +13,6 @@ const coffee = {
         image: "coffee-3.jpg",
         country: "Brasil",
         name: "Presto Coffee Beans 1kg",
-
         price: 15.99,
       },
       {
@@ -22,7 +20,6 @@ const coffee = {
         image: "coffee-3.jpg",
         country: "Brasil",
         name: "AROMISTICO Coffee 1kg",
-
         price: 6.99,
       },
       {
@@ -30,7 +27,6 @@ const coffee = {
         image: "coffee-3.jpg",
         country: "Brasil",
         name: "Solimo Coffee Beans 2kg",
-
         price: 10.73,
       },
       {
@@ -38,7 +34,6 @@ const coffee = {
         image: "coffee-3.jpg",
         country: "Brasil",
         name: "Presto Coffee Beans 1kg",
-
         price: 15.99,
       },
       {
@@ -46,10 +41,19 @@ const coffee = {
         image: "coffee-3.jpg",
         country: "Brasil",
         name: "AROMISTICO Coffee 1kg",
-
         price: 6.99,
       },
     ],
+  },
+  mutations: {
+    setCoffeeData(state, data) {
+      state.coffee = data;
+    },
+  },
+  actions: {
+    setCoffeeData({ commit }, data) {
+      commit("setCoffeeData", data);
+    },
   },
   getters: {
     getCoffee(state) {
